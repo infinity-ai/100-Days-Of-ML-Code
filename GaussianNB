@@ -3,9 +3,9 @@ from sklearn.metrics import accuracy_score
 clf = GaussianNB()
 clf.fit(features_train, labels_train)
 print clf.get_params(deep=False)
-pred = clf.predict(features_test)
-print pred
+p = clf.predict(features_test)
+print p
 print clf.predict_log_proba(features_test)
 print clf.predict_proba(features_test)
-accuracy = accuracy_score(pred, labels_test)
+accuracy = accuracy_score(p, labels_test)
 print accuracy
