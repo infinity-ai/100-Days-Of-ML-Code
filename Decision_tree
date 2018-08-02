@@ -1,0 +1,9 @@
+from sklearn import tree
+clf = tree.DecisionTreeClassifier(criterion='entropy')
+clf = clf.fit(features_train, labels_train)
+pred = clf.predict(features_test)
+
+def accuracy():
+    print(accuracy_score(pred, labels_test))
+    return None
+accuracy()
